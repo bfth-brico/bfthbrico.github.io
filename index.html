@@ -1,57 +1,525 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BFTH BRICO | متجر الخردوات والأدوات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#063b78;--orange:#f59e0b;--red:#e63946;--bg:#f5f6f8;--dark:#172033;--muted:#6b7280;--green:#18a957}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--dark);font-family:Arial,Tahoma,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}
-.top{background:#052c58;color:#fff;padding:8px 5%;font-size:13px}.topin{max-width:1250px;margin:auto;display:flex;justify-content:space-between}
-header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #0001}.nav{max-width:1250px;margin:auto;padding:12px 15px;display:flex;align-items:center;gap:18px}.logo{font-size:28px;font-weight:900;color:var(--blue);white-space:nowrap}.logo span{color:var(--orange)}
-.search{flex:1;position:relative}.search input{width:100%;height:46px;border:1px solid #d8dee7;border-radius:7px;padding:0 45px 0 15px;background:#fafafa}.search b{position:absolute;right:15px;top:11px;color:#777;font-size:20px}
-.navbtn{border:1px solid #dce2e9;background:#fff;border-radius:7px;padding:11px 13px}.cart{background:var(--orange);border:0;font-weight:bold}.cart i{background:#fff;border-radius:20px;padding:2px 7px;font-style:normal;margin-right:4px}
-.menu{background:var(--blue);color:#fff}.menuin{max-width:1250px;margin:auto;display:flex;overflow:auto}.menu button{background:none;color:#fff;border:0;padding:13px 17px;white-space:nowrap}.menu button:hover{background:#0b4f98}
-.hero{max-width:1250px;margin:18px auto 0;padding:0 15px}.banner{min-height:330px;border-radius:8px;background:linear-gradient(110deg,#062e59,#1164ad);color:#fff;padding:55px;display:flex;align-items:center}.banner h1{font-size:43px;margin:0 0 12px}.banner p{font-size:18px;line-height:1.8;max-width:650px}.banner a{display:inline-block;background:var(--orange);color:#111;padding:13px 25px;border-radius:6px;font-weight:bold}
-.wrap{max-width:1250px;margin:auto;padding:25px 15px}.head{display:flex;justify-content:space-between;align-items:center;margin:10px 0 18px}.head h2{margin:0;color:var(--blue)}.head a{color:var(--blue);font-size:14px}
-.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.cat{background:#fff;border:1px solid #e2e6eb;border-radius:7px;padding:18px 8px;text-align:center}.cat:hover{border-color:var(--orange)}.cat .ico{font-size:30px;margin-bottom:8px}.cat b{display:block;font-size:14px}
-.tabs{display:flex;gap:8px;overflow:auto;margin-bottom:15px}.tab{background:#fff;border:1px solid #ddd;padding:9px 15px;border-radius:5px;white-space:nowrap}.tab.active{background:var(--blue);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:#fff;border:1px solid #e3e6ea;border-radius:6px;overflow:hidden;position:relative}.pic{height:220px;background:#f0f1f3;position:relative}.pic img{width:100%;height:100%;object-fit:cover}.badge{position:absolute;top:10px;right:10px;background:var(--red);color:#fff;padding:5px 8px;border-radius:3px;font-size:12px}.body{padding:13px}.body h3{font-size:16px;margin:0 0 8px;min-height:38px}.desc{font-size:12px;color:var(--muted);height:34px}.price{font-size:20px;font-weight:bold;color:var(--blue);margin:10px 0}.old{font-size:12px;text-decoration:line-through;color:#999;margin-right:6px}.add{width:100%;background:var(--blue);color:#fff;border:0;border-radius:5px;padding:11px;font-weight:bold}.add:hover{background:#0a4d94}
-.strip{margin:30px 0;background:#fff;border:1px solid #e1e6eb;border-radius:7px;display:grid;grid-template-columns:repeat(4,1fr)}.strip div{padding:18px;border-left:1px solid #eee}.strip div:last-child{border:0}.strip b{display:block;margin-bottom:5px}.strip span{font-size:12px;color:var(--muted)}
-footer{background:#06213f;color:#d9e5f2;margin-top:30px}.foot{max-width:1250px;margin:auto;padding:35px 15px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.foot h3{color:#fff}.foot strong{color:var(--orange)}.copy{text-align:center;border-top:1px solid #ffffff18;padding:13px;font-size:12px}
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:50;padding:12px;overflow:auto}.box{max-width:650px;background:#fff;border-radius:9px;margin:20px auto;padding:20px}.close{float:left;border:0;background:#eee;border-radius:50%;width:35px;height:35px;font-size:20px}.item{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee}.qty button{border:0;background:#eee;padding:4px 9px}.total{font-size:21px;font-weight:bold;margin:18px 0}.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #d8dee7;border-radius:6px;margin:5px 0 10px}.send{width:100%;background:var(--green);color:#fff;border:0;padding:13px;border-radius:6px;font-weight:bold}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.cats{grid-template-columns:repeat(3,1fr)}.strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.top{display:none}.nav{gap:8px}.logo{font-size:22px}.search{display:none}.grid{grid-template-columns:repeat(2,1fr);gap:9px}.cats{grid-template-columns:repeat(3,1fr);gap:7px}.cat{padding:12px 5px}.cat .ico{font-size:24px}.pic{height:155px}.body{padding:9px}.body h3{font-size:14px}.banner{min-height:300px;padding:35px 22px}.banner h1{font-size:31px}.banner p{font-size:14px}.strip{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr}}
+:root {
+  --blue: #063b78;
+  --blue-hover: #0a4d94;
+  --dark-blue: #052c58;
+  --orange: #f59e0b;
+  --orange-hover: #d97706;
+  --red: #e63946;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --dark: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --green: #10b981;
+  --green-hover: #059669;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; border: none; outline: none; }
+
+/* Topbar */
+.top { background: var(--dark-blue); color: #93c5fd; padding: 8px 5%; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.topin { max-width: 1250px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
+
+/* Header & Nav */
+header { background: var(--card-bg); position: sticky; top: 0; z-index: 40; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.nav { max-width: 1250px; margin: auto; padding: 12px 15px; display: flex; align-items: center; gap: 18px; }
+.logo { font-size: 26px; font-weight: 900; color: var(--blue); white-space: nowrap; text-decoration: none; }
+.logo span { color: var(--orange); }
+
+.search { flex: 1; position: relative; }
+.search input {
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0 45px 0 15px;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+.search input:focus { background: #fff; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(6,59,120,0.1); }
+.search b { position: absolute; right: 14px; top: 10px; color: var(--muted); font-size: 18px; }
+
+.navbtn { border: 1px solid var(--border); background: #fff; border-radius: 8px; padding: 10px 14px; font-weight: 600; color: var(--dark); transition: all 0.2s; }
+.navbtn:hover { background: #f1f5f9; }
+.cart { background: var(--orange); color: #fff; font-weight: 700; border: none; display: flex; align-items: center; gap: 6px; }
+.cart:hover { background: var(--orange-hover); }
+.cart i { background: #fff; color: var(--orange); border-radius: 20px; padding: 1px 8px; font-style: normal; font-size: 13px; }
+
+/* Menu */
+.menu { background: var(--blue); }
+.menuin { max-width: 1250px; margin: auto; display: flex; overflow-x: auto; scrollbar-width: none; }
+.menuin::-webkit-scrollbar { display: none; }
+.menu button {
+  background: none;
+  color: #e0f2fe;
+  padding: 12px 18px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+.menu button:hover, .menu button.active { background: rgba(255,255,255,0.08); color: #fff; border-bottom-color: var(--orange); }
+
+/* Hero Banner */
+.hero { max-width: 1250px; margin: 20px auto 0; padding: 0 15px; }
+.banner {
+  min-height: 280px;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #041e3d 0%, var(--blue) 50%, #1e40af 100%);
+  color: #fff;
+  padding: 45px 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.banner::after {
+  content: "🔧";
+  position: absolute;
+  left: -20px;
+  bottom: -40px;
+  font-size: 180px;
+  opacity: 0.08;
+  transform: rotate(-15deg);
+}
+.banner h1 { font-size: 38px; margin: 0 0 10px; font-weight: 800; line-height: 1.2; }
+.banner p { font-size: 16px; line-height: 1.7; max-width: 580px; color: #cbd5e1; margin-bottom: 20px; }
+.banner a {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+}
+.banner a:hover { background: var(--orange-hover); transform: translateY(-2px); }
+
+/* Main Wrapper */
+.wrap { max-width: 1250px; margin: auto; padding: 25px 15px; }
+.head { display: flex; justify-content: space-between; align-items: center; margin: 15px 0 20px; }
+.head h2 { margin: 0; color: var(--blue); font-size: 22px; font-weight: 800; }
+.head a { color: var(--muted); font-size: 14px; text-decoration: none; font-weight: 600; }
+.head a:hover { color: var(--blue); }
+
+/* Categories */
+.cats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.cat {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow);
+}
+.cat:hover { border-color: var(--orange); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.cat .ico { font-size: 32px; margin-bottom: 8px; display: block; }
+.cat b { display: block; font-size: 14px; color: var(--dark); }
+
+/* Value Strip */
+.strip {
+  margin: 35px 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.strip div { padding: 20px; border-left: 1px solid var(--border); }
+.strip div:last-child { border: 0; }
+.strip b { display: block; margin-bottom: 4px; color: var(--blue); font-size: 15px; }
+.strip span { font-size: 13px; color: var(--muted); }
+
+/* Filter Tabs */
+.tabs { display: flex; gap: 10px; overflow-x: auto; margin-bottom: 20px; padding-bottom: 5px; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--muted);
+  transition: all 0.2s;
+}
+.tab:hover { border-color: var(--blue); color: var(--blue); }
+.tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* Product Grid & Cards */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: #cbd5e1; }
+.pic { height: 200px; background: #f1f5f9; position: relative; overflow: hidden; }
+.pic img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+.card:hover .pic img { transform: scale(1.05); }
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--red);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
+.body h3 { font-size: 15px; margin: 0 0 6px; font-weight: 700; color: var(--dark); line-height: 1.4; height: 42px; overflow: hidden; }
+.desc { font-size: 13px; color: var(--muted); height: 38px; overflow: hidden; margin-bottom: 12px; }
+.price { font-size: 18px; font-weight: 800; color: var(--blue); margin-bottom: 14px; margin-top: auto; }
+.add {
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.add:hover { background: var(--blue-hover); }
+
+/* Footer */
+footer { background: var(--dark-blue); color: #cbd5e1; margin-top: 50px; }
+.foot { max-width: 1250px; margin: auto; padding: 45px 15px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; }
+.foot h3 { color: #fff; margin-top: 0; font-size: 18px; }
+.foot strong { color: var(--orange); }
+.foot p { font-size: 14px; line-height: 1.7; margin: 8px 0; }
+.copy { text-align: center; border-top: 1px solid rgba(255,255,255,0.08); padding: 16px; font-size: 13px; color: #94a3b8; }
+
+/* Modal Cart */
+.modal { display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.6); backdrop-filter: blur(4px); z-index: 100; padding: 15px; overflow-y: auto; }
+.box { max-width: 550px; background: #fff; border-radius: 12px; margin: 30px auto; padding: 25px; box-shadow: var(--shadow-lg); animation: slideDown 0.2s ease-out; }
+@keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.modal-head { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 15px; }
+.modal-head h2 { margin: 0; font-size: 18px; color: var(--blue); }
+.close { border: 0; background: #f1f5f9; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; color: var(--muted); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.close:hover { background: #e2e8f0; color: var(--dark); }
+
+.item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.item span small { color: var(--muted); }
+.qty-btn { border: 1px solid var(--border); background: #f8fafc; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+.qty-btn:hover { background: #e2e8f0; }
+
+.total { font-size: 18px; font-weight: 800; margin: 15px 0; text-align: left; color: var(--blue); background: #f8fafc; padding: 10px; border-radius: 6px; }
+.form { margin-top: 15px; }
+.form label { display: block; font-size: 13px; font-weight: 700; margin-top: 10px; color: var(--dark); }
+.form input, .form select, .form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-top: 4px;
+  background: #fff;
+}
+.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--blue); outline: none; }
+.send { width: 100%; background: var(--green); color: #fff; border: 0; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 15px; margin-top: 15px; transition: all 0.2s; }
+.send:hover { background: var(--green-hover); }
+
+/* Responsive */
+@media(max-width:900px){
+  .grid { grid-template-columns: repeat(3,1fr); }
+  .cats { grid-template-columns: repeat(3,1fr); }
+  .strip { grid-template-columns: repeat(2,1fr); }
+  .banner h1 { font-size: 30px; }
+}
+@media(max-width:600px){
+  .top { display: none; }
+  .nav { gap: 10px; }
+  .logo { font-size: 20px; }
+  .search { display: none; }
+  .grid { grid-template-columns: repeat(2,1fr); gap: 10px; }
+  .cats { grid-template-columns: repeat(3,1fr); gap: 8px; }
+  .cat { padding: 12px 5px; }
+  .cat .ico { font-size: 24px; margin-bottom: 4px; }
+  .pic { height: 140px; }
+  .body { padding: 10px; }
+  .body h3 { font-size: 13px; height: 36px; }
+  .desc { display: none; }
+  .banner { padding: 25px 20px; min-height: 200px; }
+  .banner h1 { font-size: 22px; }
+  .banner p { font-size: 13px; }
+  .strip { grid-template-columns: 1fr 1fr; }
+  .foot { grid-template-columns: 1fr; gap: 20px; }
+}
 </style>
 </head>
 <body>
-<div class="top"><div class="topin"><span>BFTH BRICO — متجر الخردوات والأدوات</span><span>🚚 توصيل إلى 69 ولاية</span></div></div>
-<header><div class="nav"><div class="logo">BFTH <span>BRICO</span></div><div class="search"><b>⌕</b><input id="q" oninput="search()" placeholder="ماذا تبحث؟ ابحث عن منتج..."></div><button class="navbtn">👤 حسابي</button><button class="navbtn cart" onclick="openCart()">🛒 السلة <i id="count">0</i></button></div></header>
-<nav class="menu"><div class="menuin"><button onclick="filter('الكل')">الرئيسية</button><button onclick="filter('الأدوات')">🔧 العدد والأدوات</button><button onclick="filter('الكهرباء')">⚡ الكهرباء</button><button onclick="filter('الأبواب')">🚪 الأبواب</button><button onclick="filter('المنزل')">🏠 المنزل</button><button onclick="filter('المنزل')">🚿 السباكة</button><button onclick="filter('المنزل')">🌿 الحديقة</button><button onclick="filter('العروض')">🔥 العروض</button></div></nav>
-<section class="hero"><div class="banner"><div><h1>خردواتك وأدواتك<br>كلها في مكان واحد</h1><p>تشكيلة عملية للمنزل والورشة والأبواب والكهرباء. اختر منتجاتك وأرسل طلبك بسهولة عبر WhatsApp.</p><a href="#products">تسوق الآن</a></div></div></section>
+
+<div class="top">
+  <div class="topin">
+    <span>BFTH BRICO — متجر الخردوات والأدوات</span>
+    <span>🚚 توصيل لجميع الولايات 69</span>
+  </div>
+</div>
+
+<header>
+  <div class="nav">
+    <a href="#" class="logo">BFTH <span>BRICO</span></a>
+    <div class="search">
+      <b>⌕</b>
+      <input id="q" oninput="search()" placeholder="ماذا تبحث؟ ابحث عن منتج...">
+    </div>
+    <button class="navbtn cart" onclick="openCart()">
+      🛒 السلة <i id="count">0</i>
+    </button>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="menuin">
+    <button class="menu-btn active" onclick="applyFilter('الكل', this)">الرئيسية</button>
+    <button class="menu-btn" onclick="applyFilter('الأدوات', this)">🔧 العدد والأدوات</button>
+    <button class="menu-btn" onclick="applyFilter('الكهرباء', this)">⚡ الكهرباء</button>
+    <button class="menu-btn" onclick="applyFilter('الأبواب', this)">🚪 الأبواب</button>
+    <button class="menu-btn" onclick="applyFilter('السباكة', this)">🚿 السباكة</button>
+    <button class="menu-btn" onclick="applyFilter('الحديقة', this)">🌿 الحديقة</button>
+    <button class="menu-btn" onclick="applyFilter('العروض', this)">🔥 العروض</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="banner">
+    <div>
+      <h1>خردواتك وأدواتك<br>كلها في مكان واحد</h1>
+      <p>تشكيلة عملية للمنزل والورشة والأبواب والكهرباء. اختر منتجاتك وأرسل طلبك بسهولة عبر WhatsApp.</p>
+      <a href="#products">تسوق الآن</a>
+    </div>
+  </div>
+</section>
+
 <main class="wrap">
-<div class="head"><h2>تسوق حسب الأقسام</h2><a href="#products">عرض الكل</a></div>
-<div class="cats"><div class="cat" onclick="filter('الكل')"><div class="ico">🛍️</div><b>كل المنتجات</b></div><div class="cat" onclick="filter('الأدوات')"><div class="ico">🔧</div><b>الأدوات</b></div><div class="cat" onclick="filter('الكهرباء')"><div class="ico">⚡</div><b>الكهرباء</b></div><div class="cat" onclick="filter('الأبواب')"><div class="ico">🚪</div><b>الأبواب</b></div><div class="cat" onclick="filter('المنزل')"><div class="ico">🏠</div><b>المنزل</b></div><div class="cat" onclick="filter('العروض')"><div class="ico">🔥</div><b>العروض</b></div></div>
-<div class="strip"><div>🚚 <b>توصيل 69 ولاية</b><span>خدمة توصيل لمختلف الولايات</span></div><div>💬 <b>طلب عبر WhatsApp</b><span>تأكيد الطلب بسهولة</span></div><div>🛒 <b>سلة مشتريات</b><span>اجمع منتجاتك في طلب واحد</span></div><div>⭐ <b>منتجات مختارة</b><span>تشكيلة للخردوات والأدوات</span></div></div>
-<section id="products"><div class="head"><h2>المنتجات</h2><a id="result">4 منتجات</a></div><div class="tabs"><button class="tab active" onclick="filter('الكل')">الكل</button><button class="tab" onclick="filter('الأدوات')">الأدوات</button><button class="tab" onclick="filter('الكهرباء')">الكهرباء</button><button class="tab" onclick="filter('الأبواب')">الأبواب</button><button class="tab" onclick="filter('المنزل')">المنزل</button><button class="tab" onclick="filter('العروض')">العروض</button></div><div id="grid" class="grid"></div></section>
+  <div class="head">
+    <h2>تسوق حسب الأقسام</h2>
+    <a href="#products" onclick="applyFilter('الكل')">عرض الكل</a>
+  </div>
+  
+  <div class="cats">
+    <div class="cat" onclick="applyFilter('الكل')"><span class="ico">🛍️</span><b>كل المنتجات</b></div>
+    <div class="cat" onclick="applyFilter('الأدوات')"><span class="ico">🔧</span><b>الأدوات</b></div>
+    <div class="cat" onclick="applyFilter('الكهرباء')"><span class="ico">⚡</span><b>الكهرباء</b></div>
+    <div class="cat" onclick="applyFilter('الأبواب')"><span class="ico">🚪</span><b>الأبواب</b></div>
+    <div class="cat" onclick="applyFilter('السباكة')"><span class="ico">🚿</span><b>السباكة</b></div>
+    <div class="cat" onclick="applyFilter('العروض')"><span class="ico">🔥</span><b>العروض</b></div>
+  </div>
+
+  <div class="strip">
+    <div><b>🚚 توصيل 69 ولاية</b><span>خدمة توصيل سريعة وموثوقة</span></div>
+    <div><b>💬 طلب عبر WhatsApp</b><span>تأكيد ومعالجة الطلب بسهولة</span></div>
+    <div><b>🛒 سلة مشتريات</b><span>اجمع منتجاتك في طلب واحد</span></div>
+    <div><b>⭐ ضمان الجودة</b><span>منتجات خردوات وأدوات مختارة</span></div>
+  </div>
+
+  <section id="products">
+    <div class="head">
+      <h2>المنتجات</h2>
+      <a id="result">0 منتجات</a>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active" onclick="applyFilter('الكل', this)">الكل</button>
+      <button class="tab" onclick="applyFilter('الأدوات', this)">الأدوات</button>
+      <button class="tab" onclick="applyFilter('الكهرباء', this)">الكهرباء</button>
+      <button class="tab" onclick="applyFilter('الأبواب', this)">الأبواب</button>
+      <button class="tab" onclick="applyFilter('السباكة', this)">السباكة</button>
+      <button class="tab" onclick="applyFilter('الحديقة', this)">الحديقة</button>
+      <button class="tab" onclick="applyFilter('العروض', this)">العروض</button>
+    </div>
+
+    <div id="grid" class="grid"></div>
+  </section>
 </main>
-<footer><div class="foot"><div><h3>BFTH <strong>BRICO</strong></h3><p>خردوات عامة وأدوات وتجهيزات للمنزل والورشة.</p></div><div><h3>الأقسام</h3><p>الأدوات والكهرباء</p><p>الأبواب والمنزل</p></div><div><h3>تواصل معنا</h3><p>WhatsApp: 0774 334 689</p><p>توصيل 69 ولاية</p></div></div><div class="copy">© 2026 BFTH BRICO</div></footer>
-<div id="modal" class="modal"><div class="box"><button class="close" onclick="closeCart()">×</button><h2>سلة المشتريات</h2><div id="items"></div><div class="total">المجموع: <span id="total">0</span> دج</div><form class="form" onsubmit="order(event)"><input id="name" required placeholder="الاسم واللقب"><input id="phone" required placeholder="رقم الهاتف"><select id="wilaya" required><option value="">اختر الولاية</option><option>المدية</option><option>الجزائر</option><option>البليدة</option><option>تيبازة</option><option>بومرداس</option><option>وهران</option><option>قسنطينة</option><option>سطيف</option><option>باتنة</option><option>تلمسان</option><option>عنابة</option><option>بجاية</option><option>تيزي وزو</option><option>ولاية أخرى</option></select><textarea id="address" required placeholder="البلدية والحي والعنوان"></textarea><button class="send">إرسال الطلب عبر WhatsApp</button></form></div></div>
+
+<footer>
+  <div class="foot">
+    <div>
+      <h3>BFTH <strong>BRICO</strong></h3>
+      <p>متجر متخصص في الخردوات العامة والأدوات والتجهيزات للمنزل والورشات بكفاءة وجودة عالية.</p>
+    </div>
+    <div>
+      <h3>الأقسام</h3>
+      <p>الأدوات والكهرباء</p>
+      <p>الأبواب والسباكة</p>
+    </div>
+    <div>
+      <h3>تواصل معنا</h3>
+      <p>WhatsApp: 0774 334 689</p>
+      <p>توصيل لجميع الولايات</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 BFTH BRICO - جميع الحقوق محفوظة</div>
+</footer>
+
+<!-- Modal Cart -->
+<div id="modal" class="modal" onclick="if(event.target===this)closeCart()">
+  <div class="box">
+    <div class="modal-head">
+      <h2>سلة المشتريات</h2>
+      <button class="close" onclick="closeCart()">×</button>
+    </div>
+    <div id="items"></div>
+    <div class="total">المجموع: <span id="total">0</span> دج</div>
+    
+    <form class="form" id="checkoutForm" onsubmit="order(event)">
+      <label>الاسم واللقب</label>
+      <input id="name" required placeholder="أدخل اسمك الكامل">
+      
+      <label>رقم الهاتف</label>
+      <input id="phone" type="tel" required placeholder="06XXXXXXXX">
+      
+      <label>الولاية</label>
+      <select id="wilaya" required>
+        <option value="">اختر الولاية</option>
+        <option>المدية</option><option>الجزائر</option><option>البليدة</option>
+        <option>تيبازة</option><option>بومرداس</option><option>وهران</option>
+        <option>قسنطينة</option><option>سطيف</option><option>باتنة</option>
+        <option>تلمسان</option><option>عنابة</option><option>بجاية</option>
+        <option>تيزي وزو</option><option>ولاية أخرى</option>
+      </select>
+      
+      <label>العنوان التفصيلي</label>
+      <textarea id="address" rows="2" required placeholder="البلدية، الحي، الشارع"></textarea>
+      
+      <button type="submit" class="send">إرسال الطلب عبر WhatsApp 💬</button>
+    </form>
+  </div>
+</div>
+
 <script>
-const WA="213774334689",P=[
-{id:1,n:"مغلق الباب الأوتوماتيكي",p:1100,c:"الأبواب",d:"إغلاق سلس وعملي للأبواب.",i:"https://placehold.co/900x700?text=Door+Closer",b:"الأكثر طلباً"},
-{id:2,n:"مصباح مكتبي",p:1650,c:"الكهرباء",d:"مصباح عملي وأنيق للاستخدام اليومي.",i:"https://placehold.co/900x700?text=Desk+Lamp",b:"عرض زوج 3000 دج"},
-{id:3,n:"موقد كهربائي",p:1850,c:"المنزل",d:"موقد كهربائي عملي وسهل الاستخدام.",i:"https://placehold.co/900x700?text=Electric+Stove",b:"متوفر"},
-{id:4,n:"مفتاح تركيب الحنفيات",p:0,c:"الأدوات",d:"أداة عملية لتركيب وفك الحنفيات.",i:"https://placehold.co/900x700?text=Plumbing+Tool",b:"السعر عند الطلب"}];
-let C=[];
-function render(a){grid.innerHTML=a.map(x=>`<article class="card"><div class="pic"><img src="${x.i}"><span class="badge">${x.b}</span></div><div class="body"><h3>${x.n}</h3><div class="desc">${x.d}</div><div class="price">${x.p?x.p.toLocaleString()+" دج":"السعر عند الطلب"}</div><button class="add" onclick="add(${x.id})">أضف إلى السلة</button></div></article>`).join("");result.textContent=a.length+" منتجات"}
-function filter(c){render(c==="الكل"?P:P.filter(x=>c==="العروض"?x.b:x.c===c))}
-function search(){let q=document.getElementById("q").value.toLowerCase();render(P.filter(x=>(x.n+x.d).toLowerCase().includes(q)))}
-function add(id){let x=C.find(a=>a.id===id);x?x.q++:C.push({id,q:1});update();openCart()}
-function update(){count.textContent=C.reduce((s,x)=>s+x.q,0)}
-function openCart(){modal.style.display="block";draw()}function closeCart(){modal.style.display="none"}
-function draw(){let t=0;items.innerHTML=C.length?C.map(x=>{let p=P.find(a=>a.id===x.id);t+=p.p*x.q;return `<div class="item"><span>${p.n}<br><small>${p.p?p.p.toLocaleString()+" دج":"حسب الطلب"}</small></span><span><button onclick="chg(${p.id},-1)">−</button> ${x.q} <button onclick="chg(${p.id},1)">+</button></span></div>`}).join(""):"<p>السلة فارغة</p>";total.textContent=t.toLocaleString()}
-function chg(id,n){let x=C.find(a=>a.id===id);x.q+=n;if(x.q<1)C=C.filter(a=>a.id!==id);update();draw()}
-function order(e){e.preventDefault();if(!C.length)return alert("السلة فارغة");let t=0,m="طلب جديد من BFTH BRICO%0A%0A";C.forEach(x=>{let p=P.find(a=>a.id===x.id);t+=p.p*x.q;m+=`• ${p.n} × ${x.q}${p.p?" = "+(p.p*x.q).toLocaleString()+" دج":""}%0A`});m+=`%0Aالمجموع: ${t.toLocaleString()} دج%0Aالاسم: ${name.value}%0Aالهاتف: ${phone.value}%0Aالولاية: ${wilaya.value}%0Aالعنوان: ${address.value}`;window.open("https://wa.me/"+WA+"?text="+m,"_blank")}
-render(P);update();
-</script>
-</body></html>
+const WA = "213774334689";
+const P = [
+  { id: 1, n: "مغلق الباب الأوتوماتيكي", p: 1100, c: "الأبواب", d: "إغلاق سلس وعملي للأبواب الخشبية والألومنيوم.", i: "https://placehold.co/900x700/063b78/ffffff?text=Door+Closer", b: "الأكثر طلباً" },
+  { id: 2, n: "مصباح مكتبي LED", p: 1650, c: "الكهرباء", d: "مصباح عملي وموفر للطاقة للاستخدام اليومي.", i: "https://placehold.co/900x700/063b78/ffffff?text=Desk+Lamp", b: "عرض زوج 3000 دج" },
+  { id: 3, n: "موقد كهربائي سفري", p: 1850, c: "السباكة", d: "موقد كهربائي قوي وسريع التسخين وسهل الاستخدام.", i: "https://placehold.co/900x700/063b78/ffffff?text=Electric+Stove", b: "متوفر" },
+  { id: 4, n: "مفتاح تركيب الحنفيات", p: 0, c: "الأدوات", d: "أداة متطورة وعملية لتركيب وفك الحنفيات بسهولة.", i: "https://placehold.co/900x700/063b78/ffffff?text=Plumbing+Tool", b: "السعر عند الطلب" }
+];
+
+let C = [];
+
+function render(data) {
+  const grid = document.getElementById("grid");
+  const result = document.getElementById("result");
+  
+  if (!data.length) {
+    grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted)">لا توجد منتجات تطابق بحثك.</p>`;
+    result.textContent = "0 منتج";
+    return;
+  }
+  
+  grid.innerHTML = data.map(x => `
+    <article class="card">
+      <div class="pic">
+        <img src="${x.i}" alt="${x.n}" loading="lazy">
+        ${x.b ? `<span class="badge">${x.b}</span>` : ''}
+      </div>
+      <div class="body">
+        <h3>${x.n}</h3>
+        <div class="desc">${x.d}</div>
+        <div class="price">${x.p ? x.p.toLocaleString() + " دج" : "السعر عند الطلب"}</div>
+        <button class="add" onclick="add(${x.id})">🛒 أضف إلى السلة</button>
+      </div>
+    </article>
+  `).join("");
+  result.textContent = data.length + " منتجات";
+}
+
+function applyFilter(category, btnElement = null) {
+  if (btnElement) {
+    document.querySelectorAll('.tab, .menu-btn').forEach(el => {
+      if(el.textContent.includes(category) || (category === 'الكل' && (el.textContent === 'الكل' || el.textContent === 'الرئيسية'))) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    });
+  }
+  
+  if (category === 'الكل') {
+    render(P);
+  } else if (category === 'العروض') {
+    render(P.filter(x => x.b && x.b !== "متوفر"));
+  } else {
+    render(P.filter(x => x.c === category));
+  }
+}
+
+function search() {
+  let q = document.getElementById("q").value.toLowerCase().trim();
+  render(P.filter(x => (x.n + " " + x.d + " " + x.c).toLowerCase().includes(q)));
+}
+
+function add(id) {
+  let item = C.find(a => a.id === id);
+  item ? item.q++ : C.push({ id, q: 1 });
+  update();
+  openCart();
+}
+
+function update() {
+  document.getElementById("count").textContent = C.reduce((s, x) => s + x.q, 0);
+}
+
+function openCart() {
+  document.getElementById("modal").style.display = "block";
+  draw();
+}
+
+function closeCart() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function draw() {
+  let t = 0;
+  const itemsContainer = document.getElementById("items");
+  
+  if (!C.length) {
+    itemsContainer.innerHTML = `<p style="text-align:center;color:var(--muted);padding:20px 0;">السلة فارغة حالياً</p>`;
+  } else {
+    itemsContainer.innerHTML = C.map(x => {
+      let p = P.find(a => a.id === x.id);
+      let priceSum = (p.p || 0) 

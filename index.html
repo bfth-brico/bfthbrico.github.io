@@ -2,266 +2,43 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <!-- هذا السطر هو الأهم لجعل الموقع متوافقاً مع الموبايل -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BFTH BRICO | الأدوات والإكسسوارات - الصفحة الرئيسية</title>
-    <!-- CSS Link -->
+    <title>BFTH BRICO | متجر الخردوات</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- 1. الشريط العلوي جداً (Super Header) -->
-    <div class="super-header">
-        <div class="container">
-            <div class="left">
-                <i class="fas fa-truck"></i> توصيل سريع إلى 69 ولاية
-            </div>
-            <div class="center">الدفع عند الاستلام</div>
-            <div class="right">
-                7/7 خدمة عملاء <i class="fas fa-headset"></i> | <span class="phone-link"><i class="fab fa-whatsapp"></i> 0774334689</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. الهيدر الرئيسي (Main Header) -->
-    <header class="main-header">
-        <div class="container">
-            <!-- الشعار -->
-            <div class="logo">
-                <img src="https://i.ibb.co/3W6qWq1/bft-logo.png" alt="BFTH BRICO Logo">
-            </div>
-            <!-- شريط البحث -->
-            <div class="search-bar">
-                <input type="text" placeholder="ابحث عن منتج...">
-                <select>
-                    <option>جميع الأقسام</option>
-                </select>
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <!-- أيقونات المستخدم -->
-            <div class="user-actions">
-                <div class="action-item">
-                    <i class="fas fa-heart"></i>
-                    <span>المفضلة</span>
-                    <span class="count">0</span>
-                </div>
-                <div class="action-item">
-                    <i class="fas fa-user"></i>
-                    <span>حسابي</span>
-                </div>
-                <div class="action-item cart">
-                    <i class="fas fa-shopping-cart"></i>
-                    <div class="cart-info">
-                        <span>السلة</span>
-                        <span class="price">0.00 DA</span>
-                    </div>
-                    <span class="count orange">0</span>
-                </div>
-            </div>
-        </div>
+    <header>
+        <div class="logo">BFTH BRICO</div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">المنتجات</a>
+        </nav>
     </header>
 
-    <!-- 3. قائمة التنقل (Navigation) -->
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#" class="active">الرئيسية</a></li>
-                <li><a href="#">جميع المنتجات</a> <i class="fas fa-chevron-down"></i></li>
-                <li><a href="#">العروض</a></li>
-                <li><a href="#">الأدوات اليدوية</a></li>
-                <li><a href="#">إكسسوارات الحمام</a></li>
-                <li><a href="#">تنظيم المنزل</a> <i class="fas fa-chevron-down"></i></li>
-                <li><a href="#">الإنارة</a></li>
-                <li><a href="#">تواصل معنا</a></li>
-            </ul>
-        </div>
-    </nav>
+    <main>
+        <section class="hero">
+            <h1>أدوات بجودة احترافية</h1>
+            <p>توصيل سريع إلى 69 ولاية - دفع عند الاستلام</p>
+            <a href="https://wa.me/213774334689" class="cta-btn">اطلب عبر واتساب</a>
+        </section>
 
-    <!-- 4. شريط العروض (Hero Slider Area) -->
-    <section class="hero-slider">
-        <div class="container relative">
-            <div class="slider-controls prev"><i class="fas fa-chevron-left"></i></div>
-            <div class="slider-content">
-                <div class="slider-text">
-                    <h1>ثبّت الباب بأمان وأناقة</h1>
-                    <p>مانع فتح الباب مغناطيسي قوي</p>
-                    <p>تصميم عصري - جودة عالية - تثبيت سهل</p>
-                    
-                    <div class="hero-icons">
-                        <div class="icon-item"><i class="fas fa-magnet"></i> قوة مغناطيسية قوية</div>
-                        <div class="icon-item"><i class="fas fa-shield-alt"></i> متين ومقاوم للصدأ</div>
-                        <div class="icon-item"><i class="fas fa-tools"></i> تركيب سهل وسريع</div>
-                        <div class="icon-item"><i class="fas fa-pencil-ruler"></i> تصميم أنيق وعصري</div>
-                    </div>
-                    
-                    <div class="hero-buttons">
-                        <button class="btn-orange">اطلب الآن</button>
-                        <button class="btn-blue">عرض المنتج</button>
-                    </div>
+        <section class="products">
+            <h2>منتجات مميزة</h2>
+            <div class="grid">
+                <!-- بطاقة منتج -->
+                <div class="card">
+                    <div class="img-placeholder">صورة المنتج</div>
+                    <h3>رأس صنبور مرن</h3>
+                    <p class="price">950 دج</p>
+                    <a href="https://wa.me/213774334689" class="btn">طلب المنتج</a>
                 </div>
-                <div class="slider-image">
-                    <img src="https://i.ibb.co/6g6jQpP/faucet.png" alt="Door Stopper">
-                </div>
+                <!-- كرر هذه البطاقة لكل منتج -->
             </div>
-            <div class="slider-controls next"><i class="fas fa-chevron-right"></i></div>
-            <div class="price-badge">880 <span>DA</span></div>
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. شريط مميزات المتجر (Trust Badges) -->
-    <section class="trust-badges">
-        <div class="container">
-            <div class="badge-item">
-                <i class="fas fa-headset"></i>
-                <div><h3>خدمة عملاء</h3><p>متوفرة 7/7</p></div>
-            </div>
-            <div class="badge-item">
-                <i class="fas fa-history"></i>
-                <div><h3>سياسة إرجاع</h3><p>إرجاع سهل خلال 7 أيام</p></div>
-            </div>
-            <div class="badge-item">
-                <i class="fas fa-certificate"></i>
-                <div><h3>منتجات أصلية</h3><p>جودة مضمونة 100%</p></div>
-            </div>
-            <div class="badge-item">
-                <i class="fas fa-hand-holding-usd"></i>
-                <div><h3>الدفع عند الاستلام</h3><p>ادفع عند استلام طلبك</p></div>
-            </div>
-            <div class="badge-item">
-                <i class="fas fa-truck-fast"></i>
-                <div><h3>توصيل سريع</h3><p>إلى جميع ولايات الجزائر</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. الأقسام الرئيسية (Categories Section) -->
-    <section class="categories-section">
-        <div class="container">
-            <h2 class="section-title">الأقسام الرئيسية</h2>
-            <div class="category-grid">
-                <!-- قسم 1 -->
-                <div class="category-card">
-                    <div class="cat-discount">%</div>
-                    <img src="https://i.ibb.co/3m20gXh/tool-kit.png" alt="Offer">
-                    <h3>عروض خاصة</h3>
-                    <a href="#" class="btn-cat">تسوق الآن</a>
-                </div>
-                <!-- قسم 2 -->
-                <div class="category-card">
-                    <img src="https://i.ibb.co/Jz5T5q1/bth-nav-4.png" alt="Home Org">
-                    <h3>تنظيم المنزل</h3>
-                    <a href="#" class="btn-cat">تسوق الآن</a>
-                </div>
-                <!-- قسم 3 -->
-                <div class="category-card">
-                    <img src="https://i.ibb.co/51v1Y8M/nav-3.png" alt="Lighting">
-                    <h3>الإنارة</h3>
-                    <a href="#" class="btn-cat">تسوق الآن</a>
-                </div>
-                <!-- قسم 4 -->
-                <div class="category-card">
-                    <img src="https://i.ibb.co/N73h29P/nav-2.png" alt="Kitchen">
-                    <h3>إكسسوارات المطبخ</h3>
-                    <a href="#" class="btn-cat">تسوق الآن</a>
-                </div>
-                <!-- قسم 5 -->
-                <div class="category-card">
-                    <img src="https://i.ibb.co/L5hH4m4/nav-1.png" alt="Bath">
-                    <h3>إكسسوارات الحمام</h3>
-                    <a href="#" class="btn-cat">تسوق الآن</a>
-                </div>
-                <!-- قسم 6 -->
-                <div class="category-card">
-                    <img src="https://i.ibb.co/3m20gXh/tool-kit.png" alt="Tools">
-                    <h3>الأدوات اليدوية</h3>
-                    <a href="#" class="btn-cat">تسوق الآن</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. منتجات مميزة (Featured Products) -->
-    <section class="products-section">
-        <div class="container">
-            <h2 class="section-title">منتجات مميزة</h2>
-            <div class="products-carousel relative">
-                <div class="slider-controls prev"><i class="fas fa-chevron-left"></i></div>
-                <div class="product-grid">
-                    
-                    <!-- بطاقة منتج 1 -->
-                    <div class="product-card">
-                        <div class="discount-badge">-15%</div>
-                        <img src="https://i.ibb.co/6g6jQpP/faucet.png" alt="Product 1">
-                        <h3>علاقة حائط 5 خطافات</h3>
-                        <div class="rating">
-                            <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star"></i>
-                            <span class="review-count">(32)</span>
-                        </div>
-                        <div class="price-area">
-                            <span class="old-price">1,750 DA</span>
-                            <span class="new-price">1,490 DA</span>
-                        </div>
-                        <div class="product-buttons">
-                            <button class="btn-add-cart"><i class="fas fa-cart-plus"></i> أضف للسلة</button>
-                            <button class="btn-whatsapp"><i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- بطاقة منتج 2 (مثال إضافي) -->
-                    <div class="product-card">
-                        <img src="https://i.ibb.co/6g6jQpP/faucet.png" alt="Product 2">
-                        <h3>طقم أدوات منزلية 108 قطعة</h3>
-                        <div class="rating">
-                            <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star"></i>
-                            <span class="review-count">(19)</span>
-                        </div>
-                        <div class="price-area">
-                            <span class="new-price">4,250 DA</span>
-                        </div>
-                        <div class="product-buttons">
-                            <button class="btn-add-cart"><i class="fas fa-cart-plus"></i> أضف للسلة</button>
-                            <button class="btn-whatsapp"><i class="fab fa-whatsapp"></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="slider-controls next"><i class="fas fa-chevron-right"></i></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. الفوتر (Footer) -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-badge-item">
-                <i class="fas fa-heart"></i>
-                <h3>جودة عالية</h3>
-                <p>منتجات مختارة بعناية</p>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fas fa-tags"></i>
-                <h3>أسعار منافسة</h3>
-                <p>أفضل الأسعار في السوق</p>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fas fa-clock"></i>
-                <h3>توفير الوقت والجهد</h3>
-                <p>تسوق وأنت في مكانك</p>
-            </div>
-            <div class="footer-badge-item">
-                <i class="fas fa-hands-helping"></i>
-                <h3>دعم ومساعدة</h3>
-                <p>نحن دائماً في خدمتك</p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
 </body>
-                        </html>
-    
+</html>
